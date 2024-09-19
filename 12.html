@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-image:url(1.jpg);
+            background-size:cover;
+            backbround-image:auto;
+            
+            
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            background-color: ;
+            padding: 20px;
+            border-radius: 10px;
+            
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gender,hobbies{
+             margin: 10px 0;
+        }
+        
+        input[type="button"] {
+            background-color: lightcoral;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="button"]:hover {
+            background-color: crimson;
+        }
+        textarea {
+            height: 100px;
+        }n 
+        /* Default styles for desktop and larger devices */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="button"] {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover {
+    background-color: #4cae4c;
+}
+
+input[type="button"]:nth-child(2) {
+    background-color: #d9534f;
+}
+
+input[type="button"]:nth-child(2):hover {
+    background-color: #c9302c;
+}
+
+/* Responsive styles for tablets and smaller devices */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    input[type="button"] {
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input[type="button"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        transform: scale(1.2); /* Makes checkboxes and radio buttons bigger for touch inputs */
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <h1>Personal Information</h1>
+    <form>
+        <label for="fname">First Name:</label>
+        <input type="text" placeholder="Enter your Firstname" id="fname" name="fname" required/>
+
+        <label for="Lname">Last Name:</label>
+        <input type="text" placeholder="Enter your Lastname" id="Lname" name="Lname" required/>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">Male<br>
+        <input type="radio" id="female" name="gender" value="female">Female<br>
+        <input type="radio" id="other" name="gender" value="other">Others<br>
+
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age" required/>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" required/>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="email@gmail.com" id="email" name="email" required/>
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" required/>
+
+        <label for="phone">Mobile:</label>
+        <input type="tel" id="phone" name="phone" required/>
+
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" id="drawing" name="hobbies" value="drawing" />Drawing<br>
+        
+        <input type="checkbox" id="music" name="hobbies" value="music"/>music hearing<br>
+        
+        <input type="checkbox" id="games" name="hobbies" value="games" />Games<br>
+        
+
+        <label for="address"><strong>Address:</strong></label>
+        <textarea name="address" id="address"></textarea>
+
+        <input type="button" value="Submit" />
+        <input type="button" value="Reset" />
+    </form>
+</body>
+</html>
